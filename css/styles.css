@@ -1,0 +1,119 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --cardBG: hsl(216, 50%, 16%);
+    --mainBG: hsl(217, 54%, 11%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--mainBG);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    color: var(--Cyan);
+}
+
+.card {
+    background-color: var(--cardBG);
+    width: 25%;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.card .img {
+    background-image: url(../images/image-equilibrium.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 302px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card .img .view {
+    border: none;
+    background-color: rgba(0, 255, 247, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 302px;
+    visibility: hidden;
+}
+
+.card .img:hover .view{
+    visibility: visible;
+    cursor: pointer;
+}
+
+.card .description {
+    color: var(--Soft-blue);
+}
+
+.card .details {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.card .details .icons {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.card .details .price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--Cyan);
+}
+
+.card .details .time-left {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--Soft-blue);
+}
+
+.card .author {
+    color: var(--Soft-blue);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card .author-img {
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.card .author-name {
+    color: white;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin: 50px 0;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 768px) {
+    .card {
+        width: 70%;
+    }
+}
